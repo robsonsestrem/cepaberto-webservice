@@ -33,7 +33,7 @@ public class Api {
             conexao.setConnectTimeout(15000);
             conexao.setRequestProperty("User-Agent", "CepAberto");
             conexao.setRequestProperty("Accept", "application/json");
-            conexao.setRequestProperty("Authorization", "Token token=SEU_TOKEN");
+            conexao.setRequestProperty("Authorization", "Token token=5ea2d99dd968afa23c39e7231f2c02b1");
             conexao.connect();
 
             codigoResposta = conexao.getResponseCode();
@@ -77,9 +77,9 @@ public class Api {
         try {
             Logradouro oLogradouro = new Logradouro();
 
-            String cep = "40010000";
+            String cep = "98740000";
             String json;
-            json = Api.getJSONFromAPI("http://www.cepaberto.com/api/v3/cep?cep=" + cep);
+            json = Api.getJSONFromAPI("https://www.cepaberto.com/api/v3/cep?cep=" + cep);
 
             if (response == 200) {
                 JSONObject obj = new JSONObject(json);
